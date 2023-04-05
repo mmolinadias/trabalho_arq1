@@ -166,8 +166,8 @@ if __name__ == "__main__":
         for i in range(8):
             r0,r8,r16,r24= 'r'+str(i),'r'+str(i+8),'r'+str(i+16),'r'+str(i+24)
             print(f'r{i}={cpu.registradores[r0]}\t\tr{i+8}={cpu.registradores[r8]}\t\tr{i+16}={cpu.registradores[r16]}\t\tr{i+24}={cpu.registradores[r24]}')
-        for i in cpu.mem:
+        print("--------------------")
+        for i in range(len(cpu.mem)):
             if cpu.mem[i] != 0:
                 print(f'mem[{i}] = {cpu.mem[i]}')
-        print("--------------------")
         
